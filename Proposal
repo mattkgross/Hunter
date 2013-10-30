@@ -1,0 +1,40 @@
+Matthew Gross - CSCI 4229 - Undergraduate
+
+
+Summary:
+========
+I plan to create an OpenGL-based hunting game. The user will be able to pan around an envrionment filled with various objects (trees, rocks, rivers). The objective, depending upon the level of difficulty selected, will be to shoot x amount of deer. The challenge will lie within creating the deer - a believable appearance (more or less) as well as automated behavior, such as grazing and roaming. The user will be able to use a scope to zoom in and make a shot. Given a certain amount of ammunition, the user will try to hit x animals in order to win.
+
+Textures will be very important in rendering animal fur and the environment. Lighting will also help to add a more "3D" effect to the environment. By break, I hope to have the general environment constructed along with, at the least, the basic deer form and its grazing action. I will incorporate the action of shooting and the deer falling if shot between break and the end of the semester.
+
+
+Goals:
+======
+- Natural, woodland environment
+	- Brush
+	- Trees
+	- Rocks
+	- Logs
+	- Water
+	- Light Source (Sun, off screen)
+- Deer
+	- Appearance
+	- Mobility
+	- Action Simulation (Roaming, Eating, Running)
+- Gun
+	- Neck
+	- Scope
+- View
+	- Pan
+	- Zoom
+	- Ammo Count
+
+
+Stretch Goals:
+==============
+- Thermal Scope
+- Critical Hit Points (heart/head = immediate death, else requires 2 shots to kill)
+- Multiple Guns
+- Multiple Maps (Tundra, Desert, Grassland)
+- Multiple Animals (Rabbits, Bear, Moose)
+- Once a shot is made, the camera follows the bullet on its path to the animal.
