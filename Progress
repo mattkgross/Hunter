@@ -1,0 +1,13 @@
+Matthew Gross
+
+Hunting Game
+------------
+
+
+So far, I have set up my light source for my scene and arranged it to where I want it. I have textures found for grass and tree trunks. I am currently designing a texture for deer fur in photoshop and hope to have that done soon. I have set up the basic terrain layout, though no detailed objects have been added yet. I am currently in the process of making the POV be able to pan, rather than rotate around (0,0,0). Any advice for this would be very much appreciated, as it is giving me quite a few problems and I've been hung up on it lately. I've also already gone through a number of refactoring phases so as to keep my code legible and easy to navigate and add on to (which I didn't do in the previous assignments and found that it took much longer to alter anything).
+
+In terms of what I am planning for between now and break, I am wanting to have my panning function working, a general terrain with simple objects set up, and, the hardest part, my deer drawn. On a hopeful level, my deer will be able to perform at least one action - grazing or running. 
+
+After break, I will finish up my deer behaviors and finialize my environment, and then add a gun and possible scoping feature along with the firing capabilities.
+
+Again, any additional advice with regards to creating a panning POV based on mouse movement would be very much appreciated.

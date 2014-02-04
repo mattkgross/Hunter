@@ -1,0 +1,38 @@
+Project Title: Hunting Frenzy
+By: Matthew Gross (matthew.k.gross@colorado.edu)
+
+Prerequisites:
+
+1) SDL along w/ SDL mixer.
+2) Works best on Ubuntu/Linux - as it was developed in that environment. It does conform to OpenGL standards and thus should be stable for other supported platforms.
+
+Features:
+	- Environment (moon, trees, bamboo, rocks)
+	- Sounds!!! (forest ambiance, fire, and empty mag sounds)
+	- Bullet count
+	- Panning gun
+	- Running deer
+
+Controls:
+	- Use your mouse to pan (the gun follows where you mouse is pointing; total panning radius of about 120 degrees)
+	- Left click to fire
+
+Specials:
+	- Deer effects
+		- Grazes every 10 seconds
+		- Runs upon a shot fired
+		- Sinks into ground with death
+	- Easter egg
+		- Can you find it??? Hint: In the card game of Hearts, this is the term for collecting all hearts and the queen of spades.
+
+Instructions:
+	- To start a game, simply press 3, 4, or 5. The corresponding number of deer will be spawned (you have 5 bullets each time).
+	- I recommend watching the deer graze before shooting it, but fire at will!
+
+Accomplishments:
+I am very proud of this project as a whole. There was a very large amount of time and effort put into this (I estimate about 150 hours). I was able to not only implement sounds, but to implement overlapping sounds by keeping track of each sound's play requests and making the appropriate locks and resumes when necessary - I feel that the sound experience is very fluid as a result. I am also proud of my deer animation. I spent many hours in blender modifying a pre-existing deer object: separating it into parts, normalizing each part at the proper area for optimal visual effect when rotating (ie, when the legs rotate in the deer's running state). After this, I had to go about a way of rotating the deer's legs in an efficient manner with respect to its speed and body location - this also proved very challenging. Objext texturing was also a huge challenge. I had to scour the internet for a reputable tga loader library that I eventually found and then create my own interface for utilizing the library with my object textures. This resulted in the nice, glowing effect of the bamboo leaves. One last major challenge was the shoot tracking. Determining when a shot had hit a deer was not easy by any means. Along with my roommate, who is a mathematics major, I derived a series of formulae that calculated relative deer phi and theta given a three dimensional perspective skew. From this, I was able to develop a phi and theta tolerance constant for which to base a hit range for a given object. Then, after a few hours of experimentation, a phi constant and theta constant were found so that the tolerances were properly scaled to the view frame. This part was, by far, the most daunting and difficult for me, but it worked out very well and I am proud of the accuracy of the shot detection. If you are interested in seeing the two pages of math needed for this, I'd be more than happy to share it - but most of it is self explanatory within the code calculations. Overall, I am very proud of all the hard work that went into this and what came of it. I hope that you enjoy it as much as I do.
+
+Build Notes:
+	- To build on Linux, simply navigate to the main folder and type "make". For other OS, it is necessary to edit the make file when compiling.
+	- To clean, type "make clean".
+	- There is one build warning that may be appropriately ignored. "TGALoader.c:117:29: warning: operation on ‘*(texture->imageData + (long unsigned int)cswap)’ may be undefined [-Wsequence-point]". If the code is analyzed, it can be noted that this will not exceed its boundary, as the containing for loop assures that bytes outside of the image file will not be read and swapped. In running the loader, I find no memory leak attributed to this and have not found any other corresponding complaint online to problems being caused by this open library developed by Patrick Schubert. On this basis, I find it reasonable to neglect this warning. Please feel free to contact me if anything indicates the contrary - as I have found no such example.

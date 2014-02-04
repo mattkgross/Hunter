@@ -2,7 +2,7 @@
 EX=hunting
 
 #  Libraries - Linux
-LIBS=-lglut -lGLU -lGL -lm
+LIBS=-lglut -lGLU -lGL -lm -lSDL -lSDL_mixer
 #  Libraries - OSX
 #LIBS=-framework GLUT -framework OpenGL
 #  Libraries - MinGW
@@ -24,7 +24,7 @@ clean:
 	rm -f $(EX) *.o *.a
 
 #  Create archive (include glWindowPos here if you need it)
-CSCIx229.a:fatal.o loadtexbmp.o print.o project.o errcheck.o object.o
+CSCIx229.a:fatal.o loadtexbmp.o print.o project.o errcheck.o object.o TGALoader.o loadtextga.o
 	ar -rcs CSCIx229.a $^
 
 #  Obligatory UNIX inside joke

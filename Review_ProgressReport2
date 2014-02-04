@@ -1,0 +1,24 @@
+Matthew Gross
+
+Hunting Game
+------------
+
+
+So far, I have set up my light source for my scene and arranged it to where I want it. I have placed the moon and the light source up in the sky to emulate a natural light setting. I have also set up the environment. This includes, trees, bamboo, and rocks. I have textured these - some using BMP texturing provided and others using my own TGA file mipmapping (which took me an entire day to figure out and get working effectively). The enables more crisp leaves and detail with the forestry. I have also set up the user POV along with a basic gun barrel. This includes a bullet count in the HUD. Also, I have added sound effects ranging from a constant background ambiance, to a gun fire, to an empty clip sound. I originally spent a lot of time developing a mutex managed multi-threaded sound system in order to keep sounds from overriding each other before they could play. I moved away from this, however, in favor of portability away from POSIX environments. I now use a few booleans and clock time, as well as a slight abuse of the idle function, to manage sound overlap. 
+
+What do I have left? 
+
+Goals:
+	- Gun Design
+	- Deer
+	- Shooting & Reactions
+
+
+Stretch goals:
+	- Shadowing
+	- Scoping
+	- Levels
+
+Time spent so far: 80 hours
+
+I appreciate any input that you may have. I hope you enjoy my work!
